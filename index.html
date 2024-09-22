@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="index.css">
+    <title>Sell Product</title>
+</head>
+<body>
+
+    <main id="conMain" class="conMain">
+        <div class="conTop">
+            <div id="conSearch_combobox" class="conSearch_combobox">
+                <div id="conCombobox" class="conCombobox">
+                    <input type="text" id="cbbPRO" class="combobox" placeholder="ค้นหา..." autocomplete="off">
+                    <i class="fa-solid fa-caret-down icon_dropdown"></i>
+                </div>
+                <ul id="conList_pro" class="conList_pro">
+                    <!-- <li data-barcode="8856425225">PRO1 <p>฿168.00</p></li> -->
+                </ul>
+            </div>
+
+            <div class="conTop2">
+                <div class="conSell_desc">
+                    <div class="conQty">
+                        <p id="lbItemsQty">2 รายการ</p>
+                        <p id="lbUnitQty">12 ชิ้น</p>
+                    </div>
+    
+                    <div class="conNetAmt">
+                        <h2>รวมสุทธิ</h2>
+                        <span id="lbNetAmt">฿ 987.22</span>
+                    </div>
+                </div>
+
+                <div class="conTop2_R">
+                    <div class="conDiscount">
+                        <span>ลด</span>
+                        <input type="text" id="edtDiscount" class="edtDiscount" value="10.00" autocomplete="off" readonly >
+                    </div>
+
+                    <button id="btnCheckout" class="btnCheckout">ชำระเงิน F12</button>
+
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="conMiddle">
+            <table id="table-data">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>รหัส</th>
+                        <th>ชื่อสินค้า</th>
+                        <th>คงเหลือ</th>
+                        <th>ราคา/หน่วย</th>
+                        <th>จำนวน</th>
+                        <th>ส่วนลด</th>
+                        <th>ราคารวม</th>
+                        <th>ลบ</th>
+                    </tr>
+                </thead>
+                
+        
+                <tbody id="tbody-data">
+                    <tr data-proid="aaa" data-costprice="15.00" data-discamt="50.00">
+                        <td>003</td>
+                        <td>pepsi</td>
+                        <td data-qtyleft="100">100</td>
+                        <td><input type="text" id="edtSellprice" value="25.00" class="edt_intable" autocomplete="off"></td>
+                        <td><input type="text" id="edtSellqty" value="1.00" class="edt_intable" autocomplete="off"></td>
+                        <td><input type="text" id="edtDiscperone" value="0.00" class="edt_intable" autocomplete="off"></td>
+                        <td data-netamt="25.00">25.00</td>
+                        <td><i class="fa-solid fa-circle-minus icon-del" id="icon-del"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      
+        <button onclick="getbarcode('8850086130359')">clickme</button>
+        <button onclick="getProductAll('620CC2EB-CAE1-4642-84E7-9428FC891E2D' )">fetch product</button>
+        <button onclick="sumData_All()">sumData_All</button>   
+    </main>
+
+   
+
+   
+
+    <script src="index.js"></script>
+    <script src="script_combobox.js"></script>
+    <script src="script_sumData_All.js"></script>
+</body>
+</html>
