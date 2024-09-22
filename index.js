@@ -332,5 +332,5 @@ document.addEventListener('DOMContentLoaded' ,function() {
 })
 
 function ajaxTounigui() {
-    window.parent.ajaxRequest(window.frameElement, 'testajax', ['xbarcode=123']);
+    window.parent.postMessage({ event: 'testajax', xbarcode: '123' }, '*');
 }
