@@ -330,3 +330,7 @@ tbody_data.addEventListener('click' ,function(e) {
 document.addEventListener('DOMContentLoaded' ,function() {
     getProductAll('620CC2EB-CAE1-4642-84E7-9428FC891E2D');
 })
+
+function ajaxTounigui() {
+    ajaxRequest(UniURLFrame1, 'testajax', ['xbarcode=123']);
+}
